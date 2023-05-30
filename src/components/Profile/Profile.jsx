@@ -31,12 +31,7 @@ const Profile = () => {
 
 	return (
 		<Layout>
-			<div
-				style={{
-					display: 'flex',
-					gap: '2rem',
-					padding: '0 6rem',
-				}}
+			<div className='wrapper'
 			>
 				{loading ? (
 					<Spinner
@@ -51,14 +46,7 @@ const Profile = () => {
 				) : (
 					<>
 						<ProfileCard props={user} />
-						<Container
-							style={{
-								display: 'grid',
-								gridTemplateColumns: 'repeat(2, 1fr)',
-								justifyItems: 'center',
-								rowGap: '2rem',
-								paddingBottom: '10rem',
-							}}
+						<Container className='container'
 						>
 							{posts.map(
 								(post) =>
