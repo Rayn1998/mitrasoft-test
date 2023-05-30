@@ -48,7 +48,7 @@ const Main = () => {
 
 	useEffect(() => {
 		if (input !== '') {
-			const newPosts = posts.filter((post) => post.title.includes(input));
+			const newPosts = posts.filter((post) => post.title.includes(input.toLowerCase()));
 			setCurrentPosts(newPosts.slice(indexOfFirstPost, indexOfLastPost));
 		} else {
 			setCurrentPosts(posts.slice(indexOfFirstPost, indexOfLastPost));
